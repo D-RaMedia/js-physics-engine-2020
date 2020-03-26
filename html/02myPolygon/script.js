@@ -7,9 +7,9 @@ const height = window.innerHeight;
 canvas.width = width;
 canvas.height = height;
 
-// begin hier met jouw code voor deze opdracht
 
-let colors = ["Red", "Green", "Black", "purple", "yellow", "Blue", "White"];
+
+let colors = ["red", "pink", "blue", "green", "purple", "yellow", "orange"];
 
 function getRandomNumber(max){
   return Math.floor(Math.random()*max);
@@ -24,5 +24,32 @@ function repeat(){
   spawnCircle();
 }
 
+
+let points = [];
+
+for(let i =0; i<3; i++){
+  let x = getRandomInt(0,width);
+  let y = getRandomInt(0,height);
+  let myPoint = new Point(x,y,5,"black",i);
+  points.push(myPoint);
+}
+
+let myPolygon = new Polygon(point);
+myPolygon.draw(context);
+
+class Polygon{
+  constructor(points){
+    this.points = points;
+    Polygon.add(point)
+  }
+
+  draw(context){
+  }
+
+}
+
 setInterval(repeat,10);
+
+let myPolygon = new Polygon(points);
+myPolygon.draw(context);
 
