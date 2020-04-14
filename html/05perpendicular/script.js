@@ -11,8 +11,8 @@ canvas.height = height;
 
 let A,B,C,l,m;
 A = new Point(100,200,20,"green",true);
-B = new Point(600,400,20,"yellow",true);
-C = new Point(200,500,20,"blue", true);
+B = new Point(600,400,60,"yellow",true);
+C = new Point(200,500,40,"blue", true);
 l = new LinearFunction(-0,5,0);
 
 m = new LinearFunction(1,1);
