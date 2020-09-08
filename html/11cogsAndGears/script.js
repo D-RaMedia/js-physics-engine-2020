@@ -22,6 +22,13 @@ img.addEventListener('load',()=>{
 function animate(){
   context.clearRect(0,0,width,height);
   context.save();
+  context.translate(40,300);
+  context.rotate(-angle+0.3);
+  context.drawImage(img,-150,-150,300,300);
+  context.restore();
+  angle +=  0.01;
+
+  context.save();
   context.translate(320,300);
   context.rotate(angle);
   context.drawImage(img,-150,-150,300,300);
@@ -52,6 +59,20 @@ function animate(){
   context.save();
   context.translate(1440,300);
   context.rotate(angle);
+  context.drawImage(img,-150,-150,300,300);
+  context.restore();
+  angle +=  0.01;
+
+  context.save();
+  context.translate(1720,300);
+  context.rotate(-angle+0.3);
+  context.drawImage(img,-150,-150,300,300);
+  context.restore();
+  angle +=  0.01;
+
+  context.save();
+  context.translate(2000,300);
+  context.rotate(angle+0.3);
   context.drawImage(img,-150,-150,300,300);
   context.restore();
   angle +=  0.01;
