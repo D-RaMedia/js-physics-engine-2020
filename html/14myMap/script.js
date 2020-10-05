@@ -18,7 +18,7 @@ img_highres.src = "images/map_highres.jpg";
 scale = img_highres.width / img_lowres.width;
 coordinate = {};
 
-point = new Point(400,100,100,"black",true)
+point = new Point(400,90,90,"black",true)
 
 setInterval(animate,10)
 
@@ -27,10 +27,10 @@ function animate(){
   coordinate.y = point.y - point.radius;
   context.clearRect(0,0,width,height);
   //context.drawImage(img_highres,400,400,200,200,500,300,200,200);
-  context.drawImage(img_lowres,0,0);
+  context.drawImage(img_lowres,0,-10);
 
   context.fillRect(coordinate.x-5,coordinate.y-5,2*point.radius+10,2*point.radius+10);
-  context.drawImage(img_highres,coordinate.x,coordinate.y,150,150,coordinate.x,coordinate.y,2*point.radius,2*point.radius);
+  context.drawImage(img_highres,coordinate.x,coordinate.y,200,200,coordinate.x,coordinate.y,2*point.radius,2*point.radius);
   //point.draw();
 
 }
